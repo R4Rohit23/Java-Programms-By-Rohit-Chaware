@@ -138,7 +138,31 @@ public class SinglyLinkedList {
         prev.next = temp.next;
     }
 
-    // Printing the List
+    // ------------------------------------------ Reversing --------------------------------------------------------
+    public void reverse()
+    {
+        if(head == null)
+        {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
+
+        while(curr != null)
+        {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+
+    }
+
+    // ----------------------------------------- Printing the List ---------------------------------------------------
     public void printList()
     {
         if(head == null) {
@@ -166,6 +190,10 @@ public class SinglyLinkedList {
         list.insertAtTail(3);
 
         //printing list
+        list.printList();
+
+        //reversing
+        list.reverse();
         list.printList();
 
         //deleting data
