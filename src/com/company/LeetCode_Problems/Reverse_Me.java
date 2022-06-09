@@ -2,7 +2,7 @@
 //You are given a list of N integers and you need to reverse it and print the reversed list in a new line.
 
 //------------------------------------------------------Solution------------------------------------------------------
-package com.company.CodeChef_Problems;
+package com.company.LeetCode_Problems;
 import java.util.*;
 
 public class Reverse_Me {

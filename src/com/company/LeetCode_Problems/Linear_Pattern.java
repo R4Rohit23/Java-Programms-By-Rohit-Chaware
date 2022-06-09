@@ -2,7 +2,7 @@
 //You're given a number N. Print the first N numbers of the below-given pattern separated by space.
 //10,2,20,4,30,6,40,8,50,…
 //--------------------------------------------- Solution-----------------------------------------------
-package com.company.CodeChef_Problems;
+package com.company.LeetCode_Problems;
 import java.util.*;
 import java.lang.*;
 

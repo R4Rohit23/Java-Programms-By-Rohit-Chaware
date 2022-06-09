@@ -42,7 +42,7 @@ public class Pair_Wise_Swap_Nodes {
             }
             System.out.println();
         }
-
+        // Iterative way ✌
         void pairWiseSwap()
         {
             Node temp = head;
@@ -56,7 +56,7 @@ public class Pair_Wise_Swap_Nodes {
                 temp = temp.next.next;
             }
         }
-    }
+     }
 
     /* Driver program to test above functions */
     public static void main(String[] args)

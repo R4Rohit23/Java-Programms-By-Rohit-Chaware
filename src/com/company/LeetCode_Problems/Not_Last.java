@@ -6,7 +6,7 @@
 // the tens place, i.e. second digit from the right.
 
 //-------------------------------------------------Solution--------------------------------------
-package com.company.CodeChef_Problems;
+package com.company.LeetCode_Problems;
 import java.util.*;
 import java.lang.*;
 
