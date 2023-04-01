@@ -54,7 +54,7 @@ public class Binary_Search {
                 return binarySearchRecursive(arr, target, l, mid-1);
 
             // Else the element can only be present in right subarray
-            return binarySearchRecursive(arr, target, mid - 1, r);
+            return binarySearchRecursive(arr, target, mid + 1, r);
         }
 
         // We reach here when element is not present in array

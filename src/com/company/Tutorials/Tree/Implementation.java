@@ -1,7 +1,6 @@
 package com.company.Tutorials.Tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Implementation {
 
@@ -32,14 +31,35 @@ public class Implementation {
             }
         }
 
-        public void preorder(Node node)
-        {
-            if(node == null)
+        public void preorder(Node node) {
+            if (node == null)
                 return;
 
             System.out.print(node.data + " ");
             preorder(node.left);
             preorder(node.right);
+        }
+
+        // PreOrder Traversal in Iterative way
+        public List<Integer> preorderIterative(Node root)
+        {
+            List<Integer> result = new ArrayList<>();
+            Stack<Node> stack = new Stack<>();
+            stack.add(root);
+
+            while(!stack.isEmpty())
+            {
+                Node currNode = stack.peek();
+                stack.pop();
+
+                // we add right node first because in stack the order of element is top -> bottom so our stack order will be left -> right
+                if (currNode != null) {
+                    result.add(currNode.data);
+                    stack.add(currNode.right);
+                    stack.add(currNode.left);
+                }
+            }
+            return result;
         }
 
         public void postorder(Node node)
@@ -75,7 +95,7 @@ public class Implementation {
                     q.add(temp.right);
             }
         }
-        // ---------------------------------------------------------------------------------------------------------------
+        // ----------------------------------------------- Sum of Nodes ----------------------------------------------------------------
 
         public  int sumOfNodes(Node root)
         {
@@ -87,6 +107,8 @@ public class Implementation {
             return leftSum + rightSum + root.data;
         }
 
+        // -------------------------------------------- Height of the tree ------------------------------------------------------------------
+
         public int height(Node root)
         {
             if(root == null)
@@ -97,6 +119,8 @@ public class Implementation {
 
             return Math.max(leftHeight, rightHeight) + 1;
         }
+
+        // ----------------------------------------------- Diameter of tree ---------------------------------------------------------------------
 
         public int diameter(Node root)
         {
@@ -110,6 +134,8 @@ public class Implementation {
             return Math.max(dia3, Math.max(dia1, dia2));
         }
     }
+
+    // --------------------------------------------------- Main ---------------------------------------------------------------------------
 
     public static void main(String[] args) {
         // create an object of BinaryTree
@@ -133,6 +159,13 @@ public class Implementation {
         System.out.println();
         System.out.print("Binary Tree in Preorder: ");
         tree.preorder(tree.root);
+        System.out.println();
+        System.out.println("Binary Tree in PreOrder in an Iterative Way");
+        List<Integer> result = tree.preorderIterative(tree.root);
+        for(int i: result)
+        {
+            System.out.print(i + " ");
+        }
         System.out.println();
         System.out.print("Binary Tree in Postorder: ");
         tree.postorder(tree.root);

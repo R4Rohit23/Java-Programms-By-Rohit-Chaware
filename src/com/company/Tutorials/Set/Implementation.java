@@ -46,8 +46,11 @@ public class Implementation {
         // asList => it returns the list view of the array
 
         // we can iterate over the set with the help of for-each loop
+        for (Integer integer : setOfInt) {
+            System.out.print(integer + " ");
+        }
 
-        // Printing set
+        // Simple print function
         System.out.println("The given set is: " + setOfInt);
 
     }
