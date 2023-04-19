@@ -1,5 +1,6 @@
 package com.company.Algorithms.String_Matching_Algorithm;
-// In this problem, we have to find the first occurrence of needle in a haystack. The characters are taken from the set of lowercase English Characters {a, b, c, ... , y, z}.
+//  In this problem, we have to find the first occurrence of needle in a haystack. The characters are taken from the
+//  set of lowercase English Characters {a, b, c, ... , y, z}.
 public class Sliding_Window {
     public static int slidingWindow(String needle, String haystack) {
         int m = needle.length();

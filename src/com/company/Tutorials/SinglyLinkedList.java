@@ -1,4 +1,4 @@
-package com.company.Tutorials.LinkedList.Implementation;
+package com.company.Tutorials;
 
 public class SinglyLinkedList {
     Node head; // Head of the List
@@ -149,7 +149,7 @@ public class SinglyLinkedList {
 
         Node prev = null;
         Node curr = head;
-        Node next = null;
+        Node next;
 
         while(curr != null)
         {
