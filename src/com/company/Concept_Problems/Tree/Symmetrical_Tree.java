@@ -23,13 +23,13 @@ public class Symmetrical_Tree {
 
     private static boolean isSymmetricHelper(Node left, Node right)
     {
-        // if any one of the Node found to be null so we have to check that they both shoul be null
+        // if any one of the Node found to be null, so we have to check that they both should be null
         if(left == null || right == null)
         {
             return left == right;
         }
 
-        // if the nodes are not null so we have to check their value
+        // if the nodes are not null, so we have to check their value
         if(left.val != right.val) return false;
 
         // we simultaneously call left's node left and right node's right and left node's right and right node's left

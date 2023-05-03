@@ -12,12 +12,12 @@ package com.company.Algorithms;
 public class Kadane_Algorithm {
 
     public static int kadaneAlgorithm(int[] arr) {
-        int currSum = 0;
-        int maxSum = 0;
+        int currSum = arr[0];
+        int maxSum = arr[0];
 
-        for (int j : arr) {
-            currSum = Math.max(0, currSum + j);
-            maxSum = Math.max(currSum, maxSum);
+        for (int i = 1; i < arr.length; i++) {
+            currSum = Math.max(arr[i], currSum + arr[i]);
+            maxSum = Math.max(maxSum, currSum);
         }
 
         return maxSum;
