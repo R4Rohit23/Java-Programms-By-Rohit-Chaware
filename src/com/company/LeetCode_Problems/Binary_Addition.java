@@ -24,13 +24,16 @@ public class Binary_Addition {
         while (a >= 0 || b >= 0) {
             int sum = carry;
 
-            // Now, we subtract by '0' to convert the numbers from a char type into an int, so we can perform operations on the numbers
+            // Now, we subtract by '0' to convert the numbers from a char type into an int, so we can perform
+            // operations on the numbers
             if (a >= 0) sum += s1.charAt(a--) - '0';
             if (b >= 0) sum += s2.charAt(b--) - '0';
 
             carry = sum > 1 ? 1 : 0;
 
-            res.append(sum % 2); // just moduling the sum so, we can get remainder and add it into our result
+            // taking mode of sum with 2 because the maximum value of the sum will be 2 => 1 + 1,  so the sum is 0
+            // and carry is 1
+            res.append(sum % 2);
         }
 
         // check if carry is left

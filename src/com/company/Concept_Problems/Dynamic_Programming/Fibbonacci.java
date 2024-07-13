@@ -7,6 +7,8 @@ public class Fibbonacci {
 
     // we are using Dp's bottom-up approach here
     public static int fib(int n) {
+        if (n < 2) return n;
+        
         // DP in simple term is storing the result of previous sub-problem
         int[] ans = new int[n + 1];
 
