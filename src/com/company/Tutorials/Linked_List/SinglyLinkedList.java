@@ -1,4 +1,4 @@
-package com.company.Tutorials;
+package com.company.Tutorials.Linked_List;
 
 public class SinglyLinkedList {
     Node head; // Head of the List
